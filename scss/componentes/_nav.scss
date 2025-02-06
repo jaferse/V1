@@ -1,0 +1,50 @@
+@import './variables';
+
+.nav {
+    margin: 1em auto;
+    display: flex;
+    justify-content: space-between;
+    width: 94vw;
+    font-family: $fuente_general;
+    position: relative;
+
+    &__button {
+
+        list-style: none;
+        background-color: $rojo_primario;
+        color: $blanco_letra;
+        text-align: center;
+        padding: 0.3% 3%;
+        border-radius: 0.313rem;
+        font-weight: bold;
+        box-shadow: 0.313rem 0.313rem 0.625rem -0.313rem $shadow_nav;
+        text-decoration: none;
+        flex-shrink: 1;
+
+        &:hover {
+            background-color: $boton_hover;
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
+
+    .search {
+        // margin: auto 0;
+        flex-shrink: 5;
+        width: 10%;
+        position: relative;
+
+        input {
+            background-color: white;
+            border-radius: 0.438rem;
+            width: 100%;
+            &::placeholder {
+                color: black;
+            }
+
+            &:focus {
+                background-color: $blanco_letra;
+            }
+        }
+    }
+}
