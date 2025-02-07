@@ -1,15 +1,103 @@
-
-
-
-.sobreNosotros{
+.nosotros {
     width: 96vw;
     font-family: $fuente_general;
     font-size: larger;
     margin: 0 auto;
     // background-color: aqua;
     border: 2px solid black;
-}
+    text-align: justify;
 
-.nuestraHistoria{
-    margin: 5rem;
+    &>h1 {
+        text-align: center;
+    }
+
+    &__historia,
+    &__mision,
+    &__talleres,
+    &__editorial {
+        margin: 2rem 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        &__text {
+            width: 55%;
+        }
+
+        &__img {
+            width: 40%;
+            aspect-ratio: 1/1; //Hace que la caja sea cuadrada
+            border-radius: 50%;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                // object-fit: cover; // Hace que la imagen llene el contenedor sin deformarse
+            }
+
+        }
+    }
+
+    &__mision {
+        flex-direction: row-reverse;
+    }
+
+    &__talleres {
+        display: flex;
+        flex-direction: column;
+
+        &__text {
+
+            width: 100%;
+
+            ul {
+                display: flex;
+                justify-content: space-around;
+                padding: 0;
+
+                li {
+                    width: 20%;
+                    list-style: none;
+
+                    h5 {
+                        font-size: 1.3rem;
+                        text-align: center;
+                    }
+
+                    text-align: justify;
+                }
+            }
+        }
+
+        &__colaboradores {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            
+            h3 {
+                width: 100%;
+                text-align: center;
+            }
+
+            picture {
+                width: 25%;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                img {
+                    width: 80%;
+                    aspect-ratio: 1/1; //Hace que la caja sea cuadrada
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+            }
+            h4{
+                width: 25%;
+                text-align: center;
+            }
+        }
+    }
 }
