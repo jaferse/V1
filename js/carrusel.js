@@ -1,3 +1,51 @@
+function calcularMapImg(fotos) {
+    fotos.forEach((foto, key) => {
+        let centro = foto.width / 2;
+        console.log(foto.width + "X" + foto.height);
+        //Asignamos un usemap a la foto
+        foto.setAttribute('usemap', `#mapa${key}`)
+
+        //Creamos un mapa
+        const mapa = document.createElement('map');
+        mapa.setAttribute('name', `mapa${key}`)
+        /*
+        Creamos una area para colocar el botón de anterior,
+        será desde 0,0 hasta 150,height 
+        */
+        const areaBefore = document.createElement('area');
+        areaBefore.setAttribute("shape", "rect");
+        areaBefore.setAttribute("coords", `0,0,80,${foto.height}`);
+        areaBefore.setAttribute("class", "before");
+        areaBefore.setAttribute("alt", "Atrás");
+
+        //Creamos un area para el centro
+        const areaCenter = document.createElement('area');
+        areaCenter.setAttribute("shape", "rect");
+        areaCenter.setAttribute("coords", `${80 + 50},0,${foto.width - 80 - 50},${foto.height}`);
+        areaCenter.setAttribute("class", "center");
+        areaCenter.setAttribute("href", "https://google.es");
+        areaCenter.setAttribute("alt", "centro");
+        /*
+        Creamos una area para colocar el botón de siguiente,
+        será desde 0,foto.width-150 hasta width,height 
+        */
+        const areaNext = document.createElement('area');
+        areaNext.setAttribute("shape", "rect");
+        areaNext.setAttribute("coords", `${foto.width - 80},0,${foto.width},${foto.height}`);
+        areaNext.setAttribute("class", "next");
+        areaNext.setAttribute("alt", "Siguiente");
+
+        //Añadimos las areas a map
+        mapa.appendChild(areaBefore);
+        mapa.appendChild(areaCenter);
+        mapa.appendChild(areaNext);
+
+        //Añadimos el map a la foto
+        foto.after(mapa);
+    });
+}
+
+
 const sliderFrame = document.querySelector('.main__sliderFrame>ul');
 let numeroImagenes = document.querySelectorAll('.main__sliderFrame>ul>li').length;
 let currentIndex = 0;
@@ -11,50 +59,14 @@ sliderFrame.style.width = `${numeroImagenes * 100}%`;
 const fotos = document.querySelectorAll('.main__sliderFrame>ul>li>img');
 
 console.log(fotos.length);
-fotos.forEach((foto, key) => {
-    let centro=foto.width/2;
-    console.log(foto.width + "X" + foto.height);
-    //Asignamos un usemap a la foto
-    foto.setAttribute('usemap', `#mapa${key}`)
+calcularMapImg(fotos);
 
-    //Creamos un mapa
-    const mapa = document.createElement('map');
-    mapa.setAttribute('name', `mapa${key}`)
-    /*
-    Creamos una area para colocar el botón de anterior,
-    será desde 0,0 hasta 150,height 
-    */
-    const areaBefore = document.createElement('area');
-    areaBefore.setAttribute("shape", "rect");
-    areaBefore.setAttribute("coords", `0,0,150,${foto.height}`);
-    areaBefore.setAttribute("class", "before");
-    areaBefore.setAttribute("alt", "Atrás");
 
-    //Creamos un area para el centro
-    const areaCenter = document.createElement('area');
-    areaCenter.setAttribute("shape", "rect");
-    areaCenter.setAttribute("coords", `${centro-200},0,${centro+200},${foto.height}`);
-    areaCenter.setAttribute("class", "center");
-    areaCenter.setAttribute("href", "https://google.es");
-    areaCenter.setAttribute("alt", "centro");
-    /*
-    Creamos una area para colocar el botón de siguiente,
-    será desde 0,foto.width-150 hasta width,height 
-    */
-    const areaNext = document.createElement('area');
-    areaNext.setAttribute("shape", "rect");
-    areaNext.setAttribute("coords", `${foto.width - 150},0,${foto.width},${foto.height}`);
-    areaNext.setAttribute("class", "next");
-    areaNext.setAttribute("alt", "Siguiente");
 
-    //Añadimos las areas a map
-    mapa.appendChild(areaBefore);
-    mapa.appendChild(areaCenter);
-    mapa.appendChild(areaNext);
 
-    //Añadimos el map a la foto
-    foto.after(mapa);
-});
+
+
+
 // });
 
 

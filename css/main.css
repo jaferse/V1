@@ -520,18 +520,56 @@
   height: 60vh;
   margin: 0rem auto;
   overflow: hidden;
+  border-radius: 6px;
+}
+.main__sliderFrame .next {
+  background-image: url("../../img/next.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  color: white;
+  right: 0;
+  z-index: 1;
+  width: 4rem;
+  height: 100%;
+}
+.main__sliderFrame .before {
+  background-image: url("../../img/before.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  color: white;
+  left: 0;
+  z-index: 1;
+  width: 5rem;
+  height: 100%;
+}
+.main__sliderFrame .next:hover,
+.main__sliderFrame .before:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-size: contain;
+  height: 100%;
 }
 .main__sliderFrame ul {
+  margin: 0;
   display: flex;
   padding: 0;
   width: 600%;
+  height: 100%;
 }
 .main__sliderFrame ul li {
+  position: relative;
   width: 100%;
   list-style: none;
 }
 .main__sliderFrame ul li img {
   width: 100%;
+  border-radius: 6px;
 }
 .main__sliderFrame ul li map {
   cursor: pointer;
@@ -860,6 +898,10 @@
   animation-fill-mode: forwards;
 }
 .nosotros__historia, .nosotros__mision, .nosotros__talleres, .nosotros__editorial {
+  box-shadow: 4px 4px 13px -4px rgba(0, 0, 0, 0.75);
+  background-color: white;
+  background-size: cover;
+  background-position: center;
   margin: 2rem auto;
   display: flex;
   justify-content: space-between;

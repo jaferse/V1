@@ -46,6 +46,12 @@
     &__mision,
     &__talleres,
     &__editorial {
+        // background-image: url("../../img/textura3.jpg");
+        box-shadow: 4px 4px 13px -4px rgba(0,0,0,0.75);
+
+        background-color: white;
+        background-size: cover;
+        background-position: center;
         margin: 2rem auto;
         display: flex;
         justify-content: space-between;
@@ -85,7 +91,6 @@
         display: flex;
         flex-direction: column;
         position: relative;
-
         &__text {
             // position: relative;
             // margin: auto 1rem;
