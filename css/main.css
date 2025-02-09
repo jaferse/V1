@@ -523,7 +523,7 @@
   border-radius: 6px;
 }
 .main__sliderFrame .next {
-  background-image: url("../../img/next.png");
+  background-image: url("../img/next.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -535,7 +535,7 @@
   height: 100%;
 }
 .main__sliderFrame .before {
-  background-image: url("../../img/before.png");
+  background-image: url("../img/before.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -968,22 +968,22 @@
   text-align: center;
 }
 .nosotros__talleres__colaboradores > div:nth-child(2) {
-  background-image: url("../../img/PacoRocaCasa.jpg");
+  background-image: url("../img/PacoRocaCasa.jpg");
   background-position: center;
   background-size: cover;
 }
 .nosotros__talleres__colaboradores > div:nth-child(3) {
-  background-image: url("../../img/MariaMedemComic.jpg");
+  background-image: url("../img/MariaMedemComic.jpg");
   background-position: center;
   background-size: cover;
 }
 .nosotros__talleres__colaboradores > div:nth-child(4) {
-  background-image: url("../../img/AnaPenyasBien.jpg");
+  background-image: url("../img/AnaPenyasBien.jpg");
   background-position: center;
   background-size: cover;
 }
 .nosotros__talleres__colaboradores > div:nth-child(5) {
-  background-image: url("../../img/juanjoGarridoBack.jpg");
+  background-image: url("../img/juanjoGarridoBack.jpg");
   background-position: center;
   background-size: cover;
 }

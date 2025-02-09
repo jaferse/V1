@@ -16,7 +16,7 @@ $transiciones: 100 / $numero-imagenes;
     border-radius: 6px;
 
     .next {
-        background-image: url("../../img/next.png");
+        background-image: url("../img/next.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -31,7 +31,7 @@ $transiciones: 100 / $numero-imagenes;
     }
     
     .before {
-        background-image: url("../../img/before.png");
+        background-image: url("../img/before.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
