@@ -1,4 +1,4 @@
-function updateProgress(value,total) {
+function updateProgress(value, total) {
     const circle = document.querySelector('.circle-progress');
     const text = document.querySelector('.progress-text');
     const radius = circle.r.baseVal.value;
@@ -19,7 +19,7 @@ console.log(formulario);
 
 let contador = 0;
 //Inicializo información de progreso
-updateProgress(0, (formulario.elements.length-1));
+updateProgress(0, (formulario.elements.length - 1));
 
 for (const element of formulario.elements) {
 
@@ -42,7 +42,7 @@ for (const element of formulario.elements) {
 
             console.log(claseVerificacion.length);
 
-            updateProgress(claseVerificacion.length, (formulario.elements.length-1))
+            updateProgress(claseVerificacion.length, (formulario.elements.length - 1))
             console.log(contador);
 
         });
@@ -217,21 +217,13 @@ justValidate.addField('#userName',
             errorMessage: "Debes confirmar la contraseña",
         },
         {
-            rule: 'minLength',
-            value: 2,
-            errorMessage: 'Al menos debe de contener 6 caracteres'
-        },
-        {
-            rule: 'maxLength',
-            value: 50,
-            errorMessage: 'No puede superar los 50 caracteres'
-        },
-        {
-            rule: 'customRegexp',
-            value: /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[._+]).{6,}$/,
-
-            errorMessage: 'La contraseña debe de tener una longitud minima de 6 caracteres e incluir al menos una mayuscula, minuscula numero y caracter especial . _ +',
+            validator: (value, fields) => {
+                return value === fields['#password'].elem.value;
+            },
+            errorMessage:"Las contraseñas no coinciden",
         }
+       
+
 
     ],
     {

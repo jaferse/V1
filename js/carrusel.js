@@ -23,7 +23,7 @@ function calcularMapImg(fotos) {
         areaCenter.setAttribute("shape", "rect");
         areaCenter.setAttribute("coords", `${80 + 50},0,${foto.width - 80 - 50},${foto.height}`);
         areaCenter.setAttribute("class", "center");
-        areaCenter.setAttribute("href", "https://google.es");
+        areaCenter.setAttribute("href", "#");
         areaCenter.setAttribute("alt", "centro");
         /*
         Creamos una area para colocar el botón de siguiente,
