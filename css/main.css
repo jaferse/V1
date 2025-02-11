@@ -431,10 +431,7 @@
   padding-bottom: 1.875rem;
   border-radius: 0.313rem;
 }
-.footer li {
-  list-style: none;
-}
-.footer h4 {
+.footer h2 {
   text-align: center;
 }
 .footer a {
@@ -449,10 +446,10 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
 }
-.footer__nosotros h4 {
+.footer__nosotros h2 {
   grid-column: span 2;
 }
-.footer__nosotros li:hover {
+.footer__nosotros a:hover {
   text-decoration: underline;
 }
 .footer__redes img {
@@ -463,7 +460,11 @@
 .footer__redes img:hover {
   transform: scale(1.2);
 }
-.footer__ayuda li:hover {
+.footer__ayuda {
+  display: flex;
+  flex-direction: column;
+}
+.footer__ayuda a:hover {
   text-decoration: underline;
 }
 
@@ -514,13 +515,22 @@
 }
 .nav .search {
   flex-shrink: 5;
-  width: 10%;
   position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.nav .search label {
+  background-image: url("../img/lupa.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 15%;
+  cursor: pointer;
 }
 .nav .search input {
   background-color: white;
   border-radius: 0.438rem;
-  width: 100%;
+  width: 85%;
 }
 .nav .search input::-moz-placeholder {
   color: black;
@@ -647,11 +657,16 @@
   width: 90%;
   height: 75%;
   margin: 0;
+  border-radius: 0.5rem;
 }
 .main__bestSellers__portadas .tarjetaProducto__portada img {
   border-radius: 0.5rem;
   width: 100%;
   height: 100%;
+}
+.main__bestSellers__portadas .tarjetaProducto__portada:hover {
+  box-shadow: 0.313rem 0.313rem 0.625rem -0.313rem rgb(0, 0, 0);
+  transform: scale(1.01);
 }
 .main__bestSellers__portadas .tarjetaProducto__titulo {
   text-align: center;
@@ -983,7 +998,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.nosotros__talleres__colaboradores h3 {
+.nosotros__talleres__colaboradores h2 {
   width: 100%;
   text-align: center;
 }
@@ -1015,21 +1030,20 @@
   border: 2px solid black;
   overflow: hidden;
 }
-.nosotros__talleres__colaboradores__img p {
+.nosotros__talleres__colaboradores__img h3 {
   position: absolute;
-  width: 60%;
+  width: 70%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -70%);
   text-align: center;
   font-size: 2rem;
-  color: rgb(255, 255, 255);
+  color: white;
   font-weight: bold;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
   border-radius: 30px;
   z-index: 1;
   text-align: center;
+  background: #696969;
 }
 .nosotros__talleres__colaboradores__img picture {
   width: 100%;
@@ -1080,5 +1094,5 @@
   }
 }
 body {
-  background-image: url("../../img/textura.png");
+  background-image: url("../img/textura.png");
 }/*# sourceMappingURL=main.css.map */

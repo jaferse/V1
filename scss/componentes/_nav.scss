@@ -70,13 +70,22 @@
     .search {
         // margin: auto 0;
         flex-shrink: 5;
-        width: 10%;
+        // width: 10%;
         position: relative;
-
+        display: flex;
+        flex-direction: row;
+        label{
+            background-image: url("../img/lupa.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 15%;
+            cursor: pointer;
+        }
         input {
             background-color: white;
             border-radius: 0.438rem;
-            width: 100%;
+            width: 85%;
 
             &::placeholder {
                 color: black;

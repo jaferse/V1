@@ -15,12 +15,8 @@
     // border: ;
     border-radius: 0.313rem;
 
-    li {
 
-        list-style: none;
-    }
-
-    h4 {
+    h2 {
         text-align: center;
 
     }
@@ -39,11 +35,11 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
 
-        h4 {
+        h2 {
             grid-column: span 2;
         }
 
-        li {
+        a {
 
             &:hover {
                 text-decoration: underline;
@@ -66,11 +62,15 @@
     }
 
     &__ayuda {
-        li {
+        display: flex;
+        flex-direction: column;
+        a {
+
             &:hover {
                 text-decoration: underline;
             }
         }
+
     }
 
 }
